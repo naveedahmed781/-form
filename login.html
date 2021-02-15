@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="login.css">
+
+<body>
+    <html>
+
+   
+    <style>
+        .main{
+            text-align: center;
+            padding: 100px;
+            background-color: paleturquoise;
+height: 500px;
+
+        }
+    </style>
+<div class="main">
+
+    <div class="navbar">
+       
+      
+
+   <b>   <a href="index.html">Signup</a>   </b>
+      <b> <a href="logout.html">Logout</a></b> 
+        
+    </div>
+    
+    
+    
+    <br>
+    <br>
+    <div class="login">
+        <form onsubmit="return login()">
+            <div class="container">
+                <b> E-mail:</b>
+                <input type="text" placeholder="email@gmail.com" id="email" required="required">
+                <br>
+                <br>
+                <b>  Password :</b>
+                <input type="password" placeholder="********" id="password" required="required">
+                <br>
+                <br>
+                <button>Login</button>
+                <!-- <input type="reset" value="Cancel" /> -->
+            </div>
+            
+        </div>
+    </form>
+    </div>
+    <script>
+
+
+        var names = JSON.parse(localStorage.getItem("name"))
+        var emails = JSON.parse(localStorage.getItem("email"))
+        var passwords = JSON.parse(localStorage.getItem("password"))
+
+
+
+        function login() {
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            let isFound = false;
+
+
+            for (let i = 0; i < emails.length; i++) {
+                if (email === emails[i]) {
+                    isFound = i;
+                    break;
+                }
+            }
+
+            if (isFound === false) {
+                alert("user not found")
+            } else if (passwords[isFound] === password) {
+
+                alert("login success");
+                window.location.href = "./dashboard"
+           
+            } else {
+                alert("Error Password or Username")
+            }
+
+
+            return false;
+        }
+    </script> 
+    
+    
+        
+    </body>
+    </html>

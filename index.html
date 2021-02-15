@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SININ FORM</title>
+</head>
+<link rel="stylesheet" href="index.css">
+
+<body>
+<html>
+
+    <style>
+        .main{
+
+            text-align: center;
+            padding: 100px;
+           background-color: paleturquoise;
+           height: 500px;
+        }
+    </style>
+    <div class="main">
+        
+        <div class="navbar">
+            <a href="#">Signup</a>
+            <a href="login.html">Login</a>
+        </div>
+        
+        
+        
+        
+        <div class="form">
+            <form onsubmit="return signup()">
+                
+                <b>Name:</b>
+                
+                <input type="text" id="fname" maxlength="15" placeholder="First Name" required="required">
+                <input type="text" id="lname" maxlength="15" placeholder="Last Name" required="required">
+                
+                <br>
+                <br>
+                <b>Gender :</b>
+                
+                <input type="radio" name="genre" value="male" checked="checked" required="required" />Male
+                <input type="radio" name="genre" value="female" required="required" />Female
+                &nbsp; &nbsp; &nbsp;
+                <b> Age :</b>
+                <input type="date" required="required">
+                <br>
+                <br>
+                <b> E-mail:</b>
+                <input type="text" id="email" maxlength="30" placeholder="email@gmail.com" required="required">
+                
+                <br>
+                <br>
+                <b>  Password :</b>
+                
+                <input type="password" id="password" required="required">
+                
+                <!-- <input type="submit" value="Signup" /> -->
+                
+                <button>submit</button>
+                
+                <div>
+                    <!-- <input type="button" onclick="sign" value="signup"></buttn>
+                        <button type="button" class="cancelbtn"> Cancel</button> -->
+                        <input type="reset" value="Cancel" />
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        
+
+
+
+
+<script>
+
+    
+</script>
+
+
+
+
+
+
+
+
+        
+    </body>
+    
+    </html>
+    <!-- <script>
+
+    var names = [];
+    var emails = [];
+    var passwords = [];
+
+    function signup() {
+
+
+        names.push(document.getElementById("fname").value + " " + document.getElementById("lname").value);
+        emails.push(document.getElementById("email").value);
+        passwords.push(document.getElementById("password").value);
+
+        localStorage.setItem("name", JSON.stringify(names));
+        localStorage.setItem("email", emails);
+        localStorage.setItem("password", passwords);
+
+        alert("signup success");
+
+        window.location.href = "./login.html";
+        return false;
+    }
+</script> -->
